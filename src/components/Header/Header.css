@@ -1,0 +1,12 @@
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* custom components to use colorful active link you hace to find out before 54-1 module */
