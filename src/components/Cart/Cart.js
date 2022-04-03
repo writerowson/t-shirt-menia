@@ -9,7 +9,10 @@ const Cart = ({ cart, removeFromCart }) => {
     // 4. || Operator
     let command;
     if (cart.length === 0) {
-        command = <p>Please add at list one items</p>
+        command = <div>
+            <h5>Hi bye</h5>
+            <p>Please buy</p>
+        </div>
     }
     else if (cart.length === 1) {
         command = <p>Please add more</p>
@@ -25,6 +28,8 @@ const Cart = ({ cart, removeFromCart }) => {
                 {tShirt.name}
                 <button onClick={() => removeFromCart(tShirt)}>X</button>
             </p>)}
+            {cart.length === 0 || <p className='orange'>YAY. Buy</p>}
+
             {cart.length === 3 && <div className='orange'>
                 <h3>Trigonal</h3>
                 <p>Tin jon ke ki gift diba</p>
@@ -32,6 +37,7 @@ const Cart = ({ cart, removeFromCart }) => {
 
             {command}
             {cart.length !== 4 ? <p>Keep adding</p> : <button>Clear All</button>}
+            {cart.length === 4 && <button className='orange'>Reviwe Order</button>}
         </div>
     );
 };
